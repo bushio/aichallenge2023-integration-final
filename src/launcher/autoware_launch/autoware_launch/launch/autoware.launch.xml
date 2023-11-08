@@ -120,4 +120,7 @@
 
   <!-- self-driving -->
   <include file="$(find-pkg-share self_driving_controller)/launch/self_driving_controller.launch.xml" />
+
+  <!-- crank-driving-planner -->
+  <include file="$(find-pkg-share crank_driving_planner)/crank_driving_planner.launch.xml" />
 </launch>

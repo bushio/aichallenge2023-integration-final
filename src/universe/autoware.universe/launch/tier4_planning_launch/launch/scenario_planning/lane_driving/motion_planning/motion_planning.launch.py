@@ -264,7 +264,8 @@ def generate_launch_description():
     # interface parameter
     add_launch_arg(
         "input_path_topic",
-        "/planning/scenario_planning/lane_driving/behavior_planning/path",
+        #"/planning/scenario_planning/lane_driving/behavior_planning/path",
+        "/crank_driving_planner/path",
         "input path topic of obstacle_avoidance_planner",
     )
 

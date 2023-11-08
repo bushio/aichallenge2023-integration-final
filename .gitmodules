@@ -1,0 +1,3 @@
+[submodule "src/custom/crank_driving_planner"]
+	path = src/custom/crank_driving_planner
+	url = https://github.com/bushio/crank_driving_planner.git
