@@ -114,4 +114,10 @@
     <include file="$(find-pkg-share aichallenge_scoring)/launch/aichallenge_scoring.launch.xml"/>
     <node pkg="aichallenge_scoring_result" exec="scoring_result" name="scoring_result" output="screen" />
   </group>
+
+  <!-- Initial pose -->
+  <include file="$(find-pkg-share initialpose_publisher)/launch/initialpose_publisher.launch.xml" />
+
+  <!-- self-driving -->
+  <include file="$(find-pkg-share self_driving_controller)/launch/self_driving_controller.launch.xml" />
 </launch>
