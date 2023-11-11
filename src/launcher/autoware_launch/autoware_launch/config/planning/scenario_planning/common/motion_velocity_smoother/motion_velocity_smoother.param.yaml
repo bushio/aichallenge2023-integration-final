@@ -9,8 +9,8 @@
 
     # curve parameters
     max_lateral_accel: 1.0             # max lateral acceleration limit [m/ss]
-    min_curve_velocity: 2.74            # min velocity at lateral acceleration limit and steering angle rate limit [m/s]
-    decel_distance_before_curve: 3.5   # slow speed distance before a curve for lateral acceleration limit
+    min_curve_velocity: 0.1  #2.74            # min velocity at lateral acceleration limit and steering angle rate limit [m/s]
+    decel_distance_before_curve: 5.0 #3.5   # slow speed distance before a curve for lateral acceleration limit
     decel_distance_after_curve: 2.0    # slow speed distance after a curve for lateral acceleration limit
     min_decel_for_lateral_acc_lim_filter: -2.5  # deceleration limit applied in the lateral acceleration filter to avoid sudden braking [m/ss]
 
@@ -22,8 +22,8 @@
     stop_dist_to_prohibit_engage: 0.5  # if the stop point is in this distance, the speed is set to 0 not to move the vehicle [m]
 
     # stop velocity
-    stopping_velocity: 2.778  # change target velocity to this value before v=0 point [m/s]
-    stopping_distance: 0.0    # distance for the stopping_velocity [m]. 0 means the stopping velocity is not applied.
+    stopping_velocity: 2.778 # 2.778  # change target velocity to this value before v=0 point [m/s]
+    stopping_distance: 0.0 # 0.0    # distance for the stopping_velocity [m]. 0 means the stopping velocity is not applied.
 
     # path extraction parameters
     extract_ahead_dist: 200.0         # forward trajectory distance used for planning [m]
@@ -52,7 +52,7 @@
     max_steering_angle_rate: 40.0            # maximum steering angle rate [degree/s]
     resample_ds: 0.1                         # distance between trajectory points [m]
     curvature_threshold: 0.02                # if curvature > curvature_threshold, steeringRateLimit is triggered [1/m]
-    curvature_calculation_distance: 1.0      # distance of points while curvature is calculating [m]
+    curvature_calculation_distance: 0.0      # distance of points while curvature is calculating [m]
 
     # system
     over_stop_velocity_warn_thr: 1.389       # used to check if the optimization exceeds the input velocity on the stop point

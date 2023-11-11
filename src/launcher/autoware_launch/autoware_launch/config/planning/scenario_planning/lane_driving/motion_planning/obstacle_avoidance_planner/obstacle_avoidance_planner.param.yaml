@@ -4,7 +4,7 @@
       enable_smoothing: true                                       # enable path smoothing by elastic band
       enable_skip_optimization: false                              # skip elastic band and model predictive trajectory
       enable_reset_prev_optimization: false                        # If true, optimization has no fix constraint to the previous result.
-      enable_outside_drivable_area_stop: true                      # stop if the ego's trajectory footprint is outside the drivable area
+      enable_outside_drivable_area_stop: false                      # stop if the ego's trajectory footprint is outside the drivable area
       use_footprint_polygon_for_outside_drivable_area_check: false # If false, only the footprint's corner points are considered.
 
       debug:
@@ -12,8 +12,8 @@
         enable_pub_debug_marker: true           # publish debug marker
 
         # flag to show
-        enable_debug_info: false
-        enable_calculation_time_info: false
+        enable_debug_info: true
+        enable_calculation_time_info: true
 
     common:
       # output
@@ -89,16 +89,16 @@
         soft_collision_free_weight: 1000.0        # soft weight for lateral error around the middle point
 
         # tracking error
-        lat_error_weight: 1.0       # weight for lateral error
-        yaw_error_weight: 0.0       # weight for yaw error
-        yaw_error_rate_weight: 0.0  # weight for yaw error rate
-        steer_input_weight: 1.0     # weight for steering input
-        steer_rate_weight: 1.0      # weight for steering rate
+        lat_error_weight: 10.0       # weight for lateral error
+        yaw_error_weight: 10.0       # weight for yaw error
+        yaw_error_rate_weight: 10.0  # weight for yaw error rate
+        steer_input_weight: 0.0     # weight for steering input
+        steer_rate_weight: 0.0      # weight for steering rate
 
         terminal_lat_error_weight: 100.0  # weight for lateral error at terminal point
-        terminal_yaw_error_weight: 100.0  # weight for yaw error at terminal point
+        terminal_yaw_error_weight: 0.0  # 100.0 # weight for yaw error at terminal point
         goal_lat_error_weight: 1000.0     # weight for lateral error at path end point
-        goal_yaw_error_weight: 1000.0     # weight for yaw error at path end point
+        goal_yaw_error_weight: 0.0     # 1000.0 # weight for yaw error at path end point
 
       # avoidance
       avoidance:
@@ -108,9 +108,9 @@
         avoidance_cost_decrease_rate: 0.05 # decreased cost per point interval
 
         weight:
-          lat_error_weight: 0.0     # weight for lateral error
+          lat_error_weight: 10.0     # weight for lateral error
           yaw_error_weight: 10.0    # weight for yaw error
-          steer_input_weight: 100.0 # weight for yaw error
+          steer_input_weight: 0.0 # weight for yaw error
 
       # collision free constraint for optimization
       collision_free_constraints:
