@@ -3,7 +3,7 @@
     common:
       planning_algorithm: "pid_base" # currently supported algorithm is "pid_base"
 
-      is_showing_debug_info: false
+      is_showing_debug_info: true
       disable_stop_planning: false # true
 
       # longitudinal info
@@ -29,7 +29,7 @@
         trailer: true
         motorcycle: true
         bicycle: true
-        pedestrian: false
+        pedestrian: true
 
       stop_obstacle_type:
         unknown: true
@@ -65,7 +65,7 @@
       stop_obstacle_hold_time_threshold : 1.0 # maximum time for holding closest stop obstacle
 
       ignored_outside_obstacle_type:
-        unknown: true
+        unknown: false
         car: false
         truck: false
         bus: false
